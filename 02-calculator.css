@@ -4,43 +4,60 @@
   font-family: "Poppins", sans-serif;
 }
 
+body{
+  background: url(calculator-background.jpg);
+  background-size: cover;
+}
+
+@media screen and (max-width: 700px) {
+  body{
+    background: url(calculator-background-portrait.png);
+    background-size: cover;
+  }
+}
+
 .header {
   display: flex;
   justify-content: center;
+  background: rgba(255, 255, 225, 0.05);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .header h1 {
+  color: white;
   padding: 10px;
   cursor: pointer;
 }
 
 .container {
-  width: 250px;
-  height: 300px;
-  margin: 0 auto;
-  margin-top: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 225, 0.05);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  padding: 20px;
 }
 
 .display input{
+  color: white;
   margin: 10px;
-  width: 220px;
+  width: 210px;
   height: 35px;
   display: flex;
-  border: none;
+  border: 1.5px solid white;
   border-radius: 10px;
   outline: none;
   padding: 0px 8px;
   text-align: end;
   caret-color: transparent;
+  background: rgba(255, 255, 225, 0.05);
   font-size: 16px;
 }
 
-.container{
-  background-color: black;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-  padding: 20px;
+input::placeholder{
+  color: rgba(232, 232, 232, 0.938);
 }
 
 .container-1,
@@ -53,6 +70,7 @@
 
 
 button{
+  color: white;
   margin: 5px 10px;
   padding: 10px;
   border-radius: 10px;
@@ -61,13 +79,16 @@ button{
   align-items: center;
   width: 40px;
   height: 40px;
+  border: 1px solid white;
   flex: 1;
-  color: #ffffff;
   background-color: transparent;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-  border: none;
 }
 
 button:hover{
-  transform: scale(1.2, 1.2);
+  transform: scale(1.1, 1.1);
+}
+
+button:active{
+  transform: scale(1, 1);
 }
